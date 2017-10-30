@@ -1,5 +1,7 @@
 process.stdin.setEncoding('utf-8');
-var OSInfo = require('./OSInfo');
+var OSInfo = require('./modules/OSInfo');
+
+console.log('Start');
 
 process.stdin.on('readable', function() {
   var input = process.stdin.read();

@@ -14,10 +14,9 @@ var newTime = require('./Time');
     console.log('CPU model: ', cpu.model);
     console.log('CPU speed: ', cpu.speed);
     console.log('Uptime: ~', uptime.toFixed(0), 's');
-    console.log('Uptime in minutes: ~', newTime.minutes(uptime));
-    console.log('Uptime in hours: ~', newTime.hours(uptime));
+    console.log('Uptime in hours/minutes: ~', newTime.timeCount(uptime));
     console.log('User name: ', userInfo.username);
     console.log('Home dir: ', userInfo.homedir);
   }
 
-exports.dupa = getOsInfo; //Czyli ten .print to tutaj był ustawiony domyślnie :)
+exports.dupa = getOsInfo; //Aha, czyli ten "print" to tutaj był taki randomowy :)
