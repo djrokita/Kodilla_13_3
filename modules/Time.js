@@ -8,4 +8,4 @@ function secToHours(time) {
 
 module.exports = {
 	timeCount: secToHours
-}
+};
