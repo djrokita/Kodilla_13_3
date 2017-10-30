@@ -1,5 +1,6 @@
 var os = require('os');
- 
+var newTime = require('./Time');
+
   function getOsInfo() {
     var type = os.type();
     var release = os.release();
@@ -12,7 +13,9 @@ var os = require('os');
     console.log('Release: ', release);
     console.log('CPU model: ', cpu.model);
     console.log('CPU speed: ', cpu.speed);
-    console.log('Uptime: ~', (uptime/60).toFixed(0), ' min / ', (uptime/3600).toFixed(0), ' hours / ', (uptime/86400).toFixed(0), ' days');
+    console.log('Uptime: ~', uptime.toFixed(0), 's');
+    console.log('Uptime in minutes: ~', newTime.minutes(uptime));
+    console.log('Uptime in hours: ~', newTime.hours(uptime));
     console.log('User name: ', userInfo.username);
     console.log('Home dir: ', userInfo.homedir);
   }
