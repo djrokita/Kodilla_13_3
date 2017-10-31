@@ -19,11 +19,10 @@ process.stdin.on('readable', function() {
         process.stdout.write(process.env.LANG + '\n');
         break;
       case '/getOsInfo':
-        OSInfo.dupa();
+        OSInfo.get();
         break;
       default:
         process.stderr.write('Wrong instruction!\n');
     }
   }
-
 });
